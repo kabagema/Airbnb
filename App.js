@@ -18,6 +18,8 @@ const App: () => React$Node = () => {
       <SafeAreaView>
         {/* <HomeScreen /> */}
         <Post />
+        <Post />
+        <Post />
       </SafeAreaView>
     </>
   );
