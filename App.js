@@ -7,10 +7,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import HomeScreen from './src/screens/Home';
@@ -27,4 +24,3 @@ const App: () => React$Node = () => {
 };
 
 export default App;
-
