@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   bedrooms: {
     marginVertical: 10,
-    color: '#5b5b5b'
+    color: '#5b5b5b',
   },
   description: {
     fontSize: 16,
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
   oldPrice: {
     color: '#5b5b5b',
     textDecorationLine: 'line-through',
-   
   },
   totalPrice: {
     color: '#5b5b5b',
@@ -37,4 +36,3 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
-

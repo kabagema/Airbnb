@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
-import Post from './src/components/Post'
+import Post from './src/components/Post';
 import HomeScreen from './src/screens/Home';
 
 const App: () => React$Node = () => {
@@ -24,5 +24,5 @@ const App: () => React$Node = () => {
     </>
   );
 };
-
+// https://youtu.be/ZxkmTsEYfg8?t=5497
 export default App;
