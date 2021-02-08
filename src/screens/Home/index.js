@@ -25,7 +25,7 @@ const HomeScreen = () => {
         </Pressable>
       </ImageBackground>
     </View>
-  );
+  );t
 };
 
 export default HomeScreen;
