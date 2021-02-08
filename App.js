@@ -10,16 +10,21 @@ import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 import Post from './src/components/Post';
 import HomeScreen from './src/screens/Home';
+import feed from './assets/data/feed';
+
+
 
 const App: () => React$Node = () => {
+  const post1 = feed[0];
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <HomeScreen /> */}
-        <Post />
-        <Post />
-        <Post />
+        <Post post={post1} />
+        {/* <Post />
+        <Post /> */}
       </SafeAreaView>
     </>
   );
