@@ -13,8 +13,7 @@ const Post = (props) => {
       <Image
         style={styles.image}
         source={{
-          uri:
-            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg',
+          uri:post.image,
         }}
       />
       {/* Bed & Bedroom */}

@@ -12,8 +12,6 @@ import Post from './src/components/Post';
 import HomeScreen from './src/screens/Home';
 import feed from './assets/data/feed';
 
-
-
 const App: () => React$Node = () => {
   const post1 = feed[0];
 
