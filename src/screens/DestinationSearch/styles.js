@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -6,20 +6,21 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 20,
+    marginBottom: 20,
   },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 15,
+    paddingVertical: 16,
     borderBottomWidth: 1,
     borderColor: 'lightgrey',
   },
   iconContainer: {
-    backgroundColor: '#d4d4d4',
-    padding: 5,
+    backgroundColor: '#e4e4e4',
+    padding: 7,
     borderRadius: 10,
+    marginRight: 15,
   },
-  row: {},
   locationText: {},
 });
 

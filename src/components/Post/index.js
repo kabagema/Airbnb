@@ -19,11 +19,12 @@ const Post = (props) => {
       {/* Bed & Bedroom */}
       <Text style={styles.bedrooms}>{post.bed} bed {post.bedroom} bedroom </Text>
 
-      
+      {/* Desc */}
       <Text style={styles.description} numberOfLines={2}>
         {post.description}
       </Text>
 
+      {/* Price tag  */}
       <Text style={styles.prices}>
         <Text style={styles.oldPrice}>${post.oldPrice} </Text>
         <Text style={styles.price}> ${post.newPrice} </Text>/ night
