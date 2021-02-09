@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import { FlatList, Text, TextInput, View } from 'react-native'
 
-import styles from '../../components/Post/styles'
+import styles from '../DestinationSearch/styles';
 import SearchResults from '../../../assets/data/search'
+
+import LocationIcon from 'react-native-vector-icons/Entypo';
 
 const DestinationSearchScreen = () => {
 
-    const [inputText, setInputText] = useState('')
+    const [inputText, setInputText] = useState('');
+
     return (
-        <View>
+        <View style={styles.container}>
             <TextInput
-                style={styles.TextInput}
+                style={styles.textInput}
                 placeholder="where are you going?"
                 value={inputText}
                 onChange={setInputText}
@@ -18,12 +21,12 @@ const DestinationSearchScreen = () => {
             <FlatList 
                 data={SearchResults}
                 renderItem={({item}) => (
-                <View style={styles.row}>
-                    <View style={styles.iconContainer}>
-                        
+                    <View style={styles.row}>
+                        <View style={styles.iconContainer}>
+                            <LocationIcon name={"location-pin"} size={33} />
+                        </View>
+                        <Text style={styles.locationText}>{item.description}</Text>
                     </View>
-                        <Text>{item.description}</Text>
-                </View>
                 )}
             />
         </View>
