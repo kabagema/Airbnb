@@ -15,8 +15,6 @@ import HomeScreen from './src/screens/Home';
 import SearchResultScreen from './src/screens/SearchResults';
 
 const App: () => React$Node = () => {
-
-
   return (
     <>
       <StatusBar barStyle="dark-content" />
