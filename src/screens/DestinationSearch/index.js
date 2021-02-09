@@ -13,7 +13,7 @@ const DestinationSearchScreen = () => {
       {/* Search input */}
       <TextInput
         style={styles.textInput}
-        placeholder="where are you going?"
+        placeholder="Where are you going?"
         value={inputText}
         onChange={setInputText}
       />
