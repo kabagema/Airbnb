@@ -2,15 +2,18 @@
 /* eslint-disable prettier/prettier */
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import {View} from 'react-native';
+
 import HomeScreen from '../screens/Home';
 import SearchResultScreen from '../screens/SearchResults';
+import ResultTabNavigator from './ResultTabNavigator';
+
 
 const Stack = createStackNavigator();
 
 const Router = (props) => {
   return (
     <Stack.Navigator>
+
       <Stack.Screen
         name={'Welcome'}
         component={HomeScreen}
@@ -18,9 +21,10 @@ const Router = (props) => {
           headerShown: false,
         }}
       />
+
       <Stack.Screen
         name={'SearchResults'}
-        component={SearchResultScreen}
+        component={ResultTabNavigator}
         options={{
           title: 'Search your destination',
         }}

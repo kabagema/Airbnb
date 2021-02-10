@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {ImageBackground, Pressable, Text, View} from 'react-native';
 import Search from 'react-native-vector-icons/Fontisto';
@@ -29,7 +29,7 @@ const HomeScreen = () => {
         </Pressable>
       </ImageBackground>
     </View>
-  );t
+  );
 };
 
 export default HomeScreen;
