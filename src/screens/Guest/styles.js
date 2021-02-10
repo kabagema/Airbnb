@@ -34,6 +34,21 @@ const styles = StyleSheet.create({
     signs: {
         fontSize: 20,
         color: "#474747",
+    },
+    submitButton: {
+        marginBottom: 20,
+        backgroundColor: '#f15454',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 50,
+        marginHorizontal: 20,
+        borderRadius: 10,
+        bottom: 20,
+    },
+    submitText: {
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold',
     }
 });
 

@@ -4,6 +4,7 @@ import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import DestinationSearchScreen from '../screens/DestinationSearch';
 import GuestScreen from '../screens/Guest';
+import SearchResultScreen from '../screens/SearchResults';
 import {startClock} from 'react-native-reanimated';
 import TabNavigator from './TabNavigator';
 
@@ -27,13 +28,21 @@ const Router = (props) => {
             title: 'Search your destination',
           }}
         />
-        <Stack.Screen 
-                    name={"Guests"}
-                    component={GuestScreen}
-                    options={{
-                        title: 'How many people?'
-                    }}
-                />
+        <Stack.Screen
+          name={'Guests'}
+          component={GuestScreen}
+          options={{
+            title: 'How many people?',
+          }}
+        />
+
+        <Stack.Screen
+          name={'Result'}
+          component={SearchResultScreen}
+          options={{
+            title: 'Search your destination',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -4,7 +4,7 @@ import styles from './styles';
 
 const Post = (props) => {
 
-  console.log(props);
+  
   let post = props.post;
 
   return (
