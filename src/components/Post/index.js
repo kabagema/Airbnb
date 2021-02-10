@@ -3,8 +3,6 @@ import {Image, Pressable, Text, View} from 'react-native';
 import styles from './styles';
 
 const Post = (props) => {
-
-  
   let post = props.post;
 
   return (
@@ -13,11 +11,13 @@ const Post = (props) => {
       <Image
         style={styles.image}
         source={{
-          uri:post.image,
+          uri: post.image,
         }}
       />
       {/* Bed & Bedroom */}
-      <Text style={styles.bedrooms}>{post.bed} bed {post.bedroom} bedroom </Text>
+      <Text style={styles.bedrooms}>
+        {post.bed} bed {post.bedroom} bedroom{' '}
+      </Text>
 
       {/* Desc */}
       <Text style={styles.description} numberOfLines={2}>
