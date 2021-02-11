@@ -5,6 +5,7 @@ import SearchResults from '../../../assets/data/search';
 
 import LocationIcon from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
+import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 
 const DestinationSearchScreen = () => {
   const [inputText, setInputText] = useState('');
@@ -13,6 +14,19 @@ const DestinationSearchScreen = () => {
 
   return (
     <View style={styles.container}>
+      <View style={{height: 500}}>
+        <GooglePlacesAutocomplete
+          placeholder="Search"
+          onPress={(data, details = null) => {
+            console.log(data, details);
+          }}
+          query={{
+            key: 'AIzaSyCMmw7Qv61Ekr02zcjtvIvnk6Cr20qmN1w',
+            language: 'en',
+          }}
+        />
+      </View>
+
       {/* Search input */}
       <TextInput
         style={styles.textInput}
