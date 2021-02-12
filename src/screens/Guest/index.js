@@ -11,7 +11,7 @@ const GuestScreen = () => {
 
   const navigation = useNavigation();
   return (
-    <View style={{justifyContent: 'space-between', height: '100%'}}>
+    <View style={styles.container}>
       <View>
         <View style={styles.row}>
           <View>

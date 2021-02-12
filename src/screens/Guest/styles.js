@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
   adultText: {
     fontWeight: 'bold',
   },
+  container: {
+    justifyContent: 'space-between',
+    height: '100%',
+    backgroundColor: 'white',
+  },
   ageText: {
     color: '#8d8d8d',
   },
