@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: 'whitesmoke',
     height: '100%',
   },
   textInput: {
