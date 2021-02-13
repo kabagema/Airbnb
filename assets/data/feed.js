@@ -13,7 +13,7 @@ export default [
     totalPrice: 120,
     coordinate: {
       latitude: 47.696401,
-      longitude: -122.529599,
+      longitude: -122.51196,
     },
   },
   {
@@ -29,10 +29,11 @@ export default [
     newPrice: 65,
     totalPrice: 390,
     coordinate: {
-      latitude: 47.716577,
-      longitude: -122.549744,
+      latitude: 47.634004,
+      longitude: -122.572364,
     },
   },
+
   {
     id: '2',
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg',
