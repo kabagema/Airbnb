@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {Marker} from 'react-native-maps';
-import styles from './styles';
 
 const CustomMarker = (props) => {
   const {coordinate, price, onPress, isSelected} = props;

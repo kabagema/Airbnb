@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styles from './styles';
 
-import {Text, View} from 'react-native';
-import MapView, {Marker, PROVIDER_DEFAULT} from 'react-native-maps';
+import {View} from 'react-native';
+import MapView, {PROVIDER_DEFAULT} from 'react-native-maps';
 import CustomMarker from '../../components/Marker';
-import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+// import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import places from '../../../assets/data/feed';
 
 const SearchMapScreen = (props) => {
-
-    const [PlaceId, setPlaceId] = useState(null);
+  const [PlaceId, setPlaceId] = useState(null);
 
   return (
     <View style={styles.MapView}>
@@ -22,13 +21,13 @@ const SearchMapScreen = (props) => {
           latitudeDelta: 0.1,
           longitudeDelta: 0.1,
         }}>
-        {places.map(place => (
+        {places.map((place) => (
           <CustomMarker
             coordinate={place.coordinate}
             price={place.newPrice}
             isSelected={place.id === PlaceId}
             onPress={() => setPlaceId(place.id)}
-            />
+          />
         ))}
       </MapView>
     </View>
@@ -36,4 +35,3 @@ const SearchMapScreen = (props) => {
 };
 
 export default SearchMapScreen;
-

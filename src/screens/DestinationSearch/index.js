@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View} from 'react-native';
 import styles from './styles';
 
 import {useNavigation} from '@react-navigation/native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import SuggestionRow from './SuggestionRow';
-const API_KEY = 'AIzaSyAdgkExxOl9mm2TAHSsfCM4asbiOpV_eAg';
+// const API_KEY = 'AIzaSyAdgkExxOl9mm2TAHSsfCM4asbiOpV_eAg';
 
 const DestinationSearchScreen = (props) => {
   const navigation = useNavigation();
