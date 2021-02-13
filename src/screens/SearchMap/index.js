@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styles from './styles';
 
 import {FlatList, View} from 'react-native';
@@ -12,6 +12,22 @@ import useWindowDimensions from 'react-native/Libraries/Utilities/useWindowDimen
 const SearchMapScreen = (props) => {
   const [PlaceId, setPlaceId] = useState(null);
   const width = useWindowDimensions().width;
+  const flatList = useRef();
+  const viewConfig = useRef({itemVisiblePercentThreshold: 70});
+  const onViewChange = useRef(({viewableItems}) => {
+    if (viewableItems.length >= 0) {
+      const placeSelected = viewableItems[0].item;
+      setPlaceId(placeSelected.id)
+    }
+  })
+
+  useEffect(() => {
+    if (!PlaceId || !flatList) {
+      return;
+    }
+    const index = places.findIndex((place) => place.id === PlaceId);
+    flatList.current.scrollToIndex({index});
+  }, [PlaceId]);
 
   return (
     <View style={styles.MapView}>
@@ -21,8 +37,8 @@ const SearchMapScreen = (props) => {
         initialRegion={{
           latitude: 47.66998,
           longitude: -122.51247,
-          latitudeDelta: 0.1,
-          longitudeDelta: 0.1,
+          latitudeDelta: 0.2,
+          longitudeDelta: 0.2,
         }}>
         {places.map((place) => (
           <CustomMarker
@@ -34,8 +50,9 @@ const SearchMapScreen = (props) => {
           />
         ))}
       </MapView>
-      <View style={{position: 'absolute', bottom:10}}>
+      <View style={{position: 'absolute', bottom: 10}}>
         <FlatList
+          ref={flatList}
           data={places}
           renderItem={({item}) => <RoundPostItem post={item} />}
           horizontal
@@ -43,6 +60,8 @@ const SearchMapScreen = (props) => {
           snapToInterval={width - 60}
           snapToAlignment={'center'}
           decelerationRate={'fast'}
+          viewabilityConfig={viewConfig.current}
+          onViewableItemsChanged={onViewChange.current}
         />
       </View>
     </View>
