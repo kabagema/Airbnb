@@ -12,6 +12,7 @@ import ProfileIcon from 'react-native-vector-icons/EvilIcons';
 import HomeScreen from '../screens/Home';
 
 import ExploreNavigator from './ExploreNavigator';
+import SearchMapScreen from '../screens/SearchMap';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +30,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen
         name={'Saved'}
-        component={HomeScreen}
+        component={SearchMapScreen}
         options={{
           tabBarIcon: ({color}) => (
             <HeartIcon name="heart-o" size={25} color={color} />
