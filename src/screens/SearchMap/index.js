@@ -1,13 +1,13 @@
 import React, {useEffect, useRef, useState} from 'react';
-import styles from './styles';
-
 import {FlatList, View} from 'react-native';
 import MapView, {PROVIDER_DEFAULT} from 'react-native-maps';
-import CustomMarker from '../../components/Marker';
-// import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
-import places from '../../../assets/data/feed';
-import RoundPostItem from '../../components/RoundaboutPost';
 import useWindowDimensions from 'react-native/Libraries/Utilities/useWindowDimensions';
+
+import styles from './styles';
+import CustomMarker from '../../components/Marker';
+import places from '../../../assets/data/feed';
+
+import RoundPostItem from '../../components/RoundaboutPost';
 
 const SearchMapScreen = (props) => {
   const [PlaceId, setPlaceId] = useState(null);
