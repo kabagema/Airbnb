@@ -14,6 +14,8 @@ import HomeScreen from '../screens/Home';
 import ExploreNavigator from './ExploreNavigator';
 import SearchMapScreen from '../screens/SearchMap';
 
+import PostScreen from '../screens/PostScreen';
+
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
