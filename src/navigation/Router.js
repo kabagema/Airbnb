@@ -7,6 +7,7 @@ import GuestScreen from '../screens/Guest';
 import SearchResultScreen from '../screens/SearchResults';
 import {startClock} from 'react-native-reanimated';
 import TabNavigator from './TabNavigator';
+import PostScreen from '../screens/PostScreen';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,13 @@ const Router = (props) => {
           component={SearchResultScreen}
           options={{
             title: 'Search your destination',
+          }}
+        />
+        <Stack.Screen
+          name={'Post'}
+          component={PostScreen}
+          options={{
+            title: 'Your accomodation',
           }}
         />
       </Stack.Navigator>
