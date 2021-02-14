@@ -4,7 +4,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 
 import HomeScreen from '../screens/Home';
-import SearchResultScreen from '../screens/SearchResults';
 import ResultTabNavigator from './ResultTabNavigator';
 
 

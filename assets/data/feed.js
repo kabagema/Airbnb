@@ -30,7 +30,7 @@ export default [
     totalPrice: 390,
     coordinate: {
       latitude: 47.634004,
-      longitude: -122.572364,
+      longitude: -122.572464,
     },
   },
 
