@@ -24,7 +24,7 @@ const HomeScreen = () => {
 
         <Pressable
           style={styles.button}
-          onPress={() => console.warn('Explore Btn clicked')}>
+          onPress={() => navigation.navigate('Result')}>
           <Text style={styles.buttonText}>Explore Nearby stays</Text>
         </Pressable>
       </ImageBackground>
