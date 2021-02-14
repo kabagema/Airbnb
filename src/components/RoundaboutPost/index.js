@@ -1,13 +1,24 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Image, Text, View} from 'react-native';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import useWindowDimensions from 'react-native/Libraries/Utilities/useWindowDimensions';
 import styles from './styles';
 
 const RoundPostItem = (props) => {
   let post = props.post;
   const width = useWindowDimensions().width;
+
+  const navigation = useNavigation();
+
+  const goToPost = () => {
+    navigation.navigate('Post', {idPost: post.id});
+  };
+
   return (
-    <View style={[styles.container, {width: width - 60}]}>
+    <Pressable
+      onPress={goToPost}
+      style={[styles.container, {width: width - 60}]}>
       <View style={styles.innerContainer}>
         {/* Image */}
         <Image
@@ -32,11 +43,9 @@ const RoundPostItem = (props) => {
           <Text style={styles.prices}>
             <Text style={styles.price}> ${post.newPrice} </Text>/ night
           </Text>
-
-          {/* Type & Description */}
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
