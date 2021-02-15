@@ -68,7 +68,7 @@ const SearchMapScreen = (props) => {
           data={places}
           renderItem={({item}) => <RoundPostItem post={item} />}
           horizontal
-          keyExtractor={places.id}
+          // keyExtractor={places.id}
           showsHorizontalScrollIndicator={false}
           snapToInterval={width - 70}
           snapToAlignment={'center'}
