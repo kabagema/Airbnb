@@ -5,7 +5,7 @@ import {Marker} from 'react-native-maps';
 const CustomMarker = (props) => {
   const {id, coordinate, price, onPress, isSelected} = props;
   return (
-    <Marker coordinate={coordinate} onPress={onPress}>
+    <Marker key={id} coordinate={coordinate} onPress={onPress}>
       <View
         style={{
           backgroundColor: isSelected ? 'black' : 'white',

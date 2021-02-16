@@ -53,7 +53,7 @@ const SearchMapScreen = (props) => {
         }}>
         {places.map((place) => (
           <CustomMarker
-            id={place.id}
+            key={place.id}
             coordinate={place.coordinate}
             price={place.newPrice}
             isSelected={place.id === PlaceId}

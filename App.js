@@ -18,18 +18,23 @@ import SearchResultScreen from './src/screens/SearchResults';
 import Router from './src/navigation/Router';
 import SearchMapScreen from './src/screens/SearchMap';
 
+import {withAuthenticator, signIn, signOut} from 'aws-amplify-react-native';
+
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-        <Router />
-      {/* <Router /> */}
-      {/* <SearchMapScreen /> */}
+      <Router />
     </>
   );
 };
 
-export default App;
-
+export default withAuthenticator(App);
 
 // https://youtu.be/2zy2qX1eR6E?t=8729
+{
+  /* <Router /> */
+}
+{
+  /* <SearchMapScreen /> */
+}
