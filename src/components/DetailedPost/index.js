@@ -12,28 +12,28 @@ const DetailedPost = (props) => {
         <Image
           style={styles.image}
           source={{
-            uri: post.image,
+            uri: post?.image,
           }}
         />
         {/* Bed & Bedroom */}
         <Text style={styles.bedrooms}>
-          {post.bed} bed {post.bedroom} bedroom{' '}
+          {post?.bed} bed {post?.bedroom} bedroom{' '}
         </Text>
 
         {/* Type & Description */}
         <Text style={styles.description} numberOfLines={2}>
-          {post.type}. {post.title}
+          {post?.type}. {post?.title}
         </Text>
 
         {/* Price tag  */}
         <Text style={styles.prices}>
-          <Text style={styles.oldPrice}>${post.oldPrice}</Text>
-          <Text style={styles.price}> ${post.newPrice} </Text>/ night
+          <Text style={styles.oldPrice}>${post?.oldPrice}</Text>
+          <Text style={styles.price}> ${post?.newPrice} </Text>/ night
         </Text>
 
         {/* Desc */}
-        <Text style={styles.totalPrice}>${post.totalPrice} total</Text>
-        <Text style={styles.longText}>{post.description}</Text>
+        <Text style={styles.totalPrice}>${post?.totalPrice} total</Text>
+        <Text style={styles.longText}>{post?.description}</Text>
       </View>
     </ScrollView>
   );

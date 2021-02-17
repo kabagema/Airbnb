@@ -41,7 +41,7 @@ const SearchMapScreen = (props) => {
       longitudeDelta: 0.1,
     };
     map.current.animateToRegion(region);
-  }, [PlaceId]);
+  }, [posts, PlaceId]);
 
   useEffect(() => {
     const fetchPosts = async () => {
