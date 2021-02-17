@@ -7,8 +7,8 @@ import styles from './styles';
 const days = 7;
 
 const Post = (props) => {
-
   let post = props.post;
+
   const navigation = useNavigation();
 
   const goToPost = () => {

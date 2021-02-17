@@ -3,12 +3,10 @@ import React, {useState} from 'react';
 import {useEffect} from 'react';
 import {FlatList, View} from 'react-native';
 
-import feed from '../../../assets/data/feed';
 import {listPosts} from '../../graphql/queries';
 import Post from '../../components/Post';
 
 const SearchResultScreen = (props) => {
-
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
