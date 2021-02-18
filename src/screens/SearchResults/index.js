@@ -9,7 +9,7 @@ import Post from '../../components/Post';
 const SearchResultScreen = (props) => {
   const [posts, setPosts] = useState([]);
 
-  const {guests} = props;
+  const {guests, viewport} = props;
 
   useEffect(() => {
     const fetchPosts = async () => {
