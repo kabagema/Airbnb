@@ -18,6 +18,8 @@ const SearchMapScreen = (props) => {
   const flatList = useRef();
   const map = useRef();
 
+  const {guests} = props;
+
   const viewConfig = useRef({itemVisiblePercentThreshold: 70});
   const onViewChanged = useRef(({viewableItems}) => {
     if (viewableItems.length > 0) {
@@ -46,7 +48,15 @@ const SearchMapScreen = (props) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const postResult = await API.graphql(graphqlOperation(listPosts));
+        const postResult = await API.graphql(
+          graphqlOperation(listPosts, {
+            filter: {
+              maxGuests: {
+                ge: guests,
+              },
+            },
+          }),
+        );
 
         setPosts(postResult.data.listPosts.items);
       } catch (e) {
@@ -54,7 +64,7 @@ const SearchMapScreen = (props) => {
       }
     };
     fetchPosts();
-  }, []);
+  }, [guests]);
 
   return (
     <View style={styles.MapView}>

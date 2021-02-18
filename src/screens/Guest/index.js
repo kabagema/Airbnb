@@ -73,7 +73,6 @@ const GuestScreen = () => {
             </Pressable>
 
             <Text style={styles.number}>{infants}</Text>
-
             <Pressable
               onPress={() => setinfants(infants + 1)}
               style={styles.button}>
@@ -90,6 +89,9 @@ const GuestScreen = () => {
               screen: 'Explore',
               params: {
                 screen: 'SearchResults',
+                params: {
+                  guests: adults + children,
+                },
               },
             })
           }

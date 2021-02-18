@@ -9,10 +9,20 @@ import Post from '../../components/Post';
 const SearchResultScreen = (props) => {
   const [posts, setPosts] = useState([]);
 
+  const {guests} = props;
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const postResult = await API.graphql(graphqlOperation(listPosts));
+        const postResult = await API.graphql(
+          graphqlOperation(listPosts, {
+            filter: {
+              maxGuests: {
+                ge: guests,
+              },
+            },
+          }),
+        );
 
         setPosts(postResult.data.listPosts.items);
       } catch (e) {
@@ -20,7 +30,7 @@ const SearchResultScreen = (props) => {
       }
     };
     fetchPosts();
-  }, []);
+  });
 
   return (
     <View>
